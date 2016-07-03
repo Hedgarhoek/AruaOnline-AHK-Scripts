@@ -36,7 +36,7 @@ Time to archive them :D
   Scripts used in disassembling essence/low essence.
   Also contains scripts for Easy-AFK-228-Dealer-Craft
   ^This plus some memory hack, you can level from 1 to 228 in 4 hours?
-  (Will upload my complete craft scripts sometime next fortnight since it's in my other laptop)
+  Link contains a little documentation
 </p>
 
 * [Miscellaneous](Miscellaneous)

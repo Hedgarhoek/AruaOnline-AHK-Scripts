@@ -59,7 +59,9 @@ EnumChildFindPoint(aWnd, lParam)
     return true
 }
 
-ControlClick2(X, Y, posx, posy, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")
+
+;**   Drag Drop   **
+DragDrop(X, Y, posx, posy, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")
 {
   hwnd:=ControlFromPoint(X, Y, WinTitle, WinText, cX, cY
                              , ExcludeTitle, ExcludeText)
@@ -68,4 +70,22 @@ ControlClick2(X, Y, posx, posy, WinTitle="", WinText="", ExcludeTitle="", Exclud
                              , ExcludeTitle, ExcludeText)
   sleep 50
   PostMessage, 0x202, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% ; WM_LBUTTONUP
+}
+
+;**  Left Click  **
+ControlClickUpgrade(X, Y, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")
+{
+  hwnd:=ControlFromPoint(X, Y, WinTitle, WinText, cX, cY
+                             , ExcludeTitle, ExcludeText)
+  PostMessage, 0x201, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% ; WM_LBUTTONDOWN
+  PostMessage, 0x202, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% ; WM_LBUTTONUP
+}
+
+;**  Right Click **
+RControlClickUpgrade(X, Y, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")
+{
+  hwnd:=ControlFromPoint(X, Y, WinTitle, WinText, cX, cY
+                             , ExcludeTitle, ExcludeText)
+  PostMessage, 0x204, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% ; WM_LBUTTONDOWN
+  PostMessage, 0x205, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% ; WM_LBUTTONUP
 }
