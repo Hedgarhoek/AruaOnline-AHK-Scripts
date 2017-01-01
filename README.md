@@ -1,7 +1,9 @@
 #AruaOnline Scripts
 
+<p>
 Scripts I used while playing AruaROSE
 Time to archive them :D
+</p>
 
 ## Subdirectories:
 * [Bot](Bot)
@@ -21,7 +23,7 @@ Time to archive them :D
 
 * [PVP](PVP)
 <p>
-  Script that works in PVP Zones
+  Script that works in PVP Zones, e.g. gem switch, multi client
   Used *ControlClick {Right Click}*
 </p>
 
